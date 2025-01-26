@@ -1,0 +1,96 @@
+header {
+  background-color: #47b8ff80;
+  color: #1854b5;
+  text-align: center;
+  padding: 5px;
+  font: normal 18pt Arial;
+}
+* { 
+  color: var(--fontColor);
+ }
+body {
+
+font: normal 12pt Trebuchet MS ;
+background: var(--bg);
+}
+.light-theme {
+  --bg: var(--white);
+  --fontColor: var(--black);
+  --btnBg: var(--black);
+  --btnFontColor: var(--white);
+  
+}
+.dark-theme {
+  --bg: var(--black);
+  --fontColor: var(--white);
+  --btnBg: var(--white);
+  --btnFontColor: var(--black);
+}
+:root {
+  --green: #00FF00;
+  --white: #E0FFFF;
+  --black: #2e2d2d;
+}
+.theme-switcher {
+      padding: 2px;
+      width: -moz-fit-content;
+      width: fit-content;
+      display: flex;
+      background-color: #0097f544;
+      border-radius: 9999px;
+      border: 1px solid rgb(0, 0, 0);
+      float: right;
+}
+    
+.btn{
+      width: 30px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: inherit;
+      border: 0;
+      background: none;
+      cursor: pointer;
+}
+    
+.theme-switcher_switch:hover > .icon {
+      stroke: #323232;
+}
+    
+.theme-switcher_switch:active {
+      background-color: rgba(128, 128, 128, 0.35);
+}
+    
+.theme-switcher_switch:active > .icon {
+      stroke: white;
+}
+.btn:focus{ outline-style: none; }
+.circulo {
+  width: 50px; /* largura da div */
+  height: 50px; /* altura da div */
+  overflow: hidden; /* esconde partes da imagem que ultrapassem a div */
+  border-radius: 50%; /* torna a div e a imagem redondas */
+  border: 0px solid #000000; /* borda opcional */
+  float: left;
+}
+.circulo img {
+  width: 100%; /* garante que a imagem ocupe todo o espaço da div */
+  height: auto; /* mantém a proporção da imagem */
+  display: block; /* remove espaços em branco abaixo da imagem */
+}
+input[type="submit"] {
+  background-color: #0692c9be;
+  color: white;
+  padding: 10px 15px;
+  margin: 8px 0;
+  border: 1;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 9%;
+}
+input[type="submit"]:hover {
+  background-color: #64b9db;
+  color: black;
+  transition: 0.7s;
+}

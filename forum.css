@@ -1,0 +1,144 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #E0FFFF; 
+}
+
+.forum {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 2px solid #1854b5;
+  border-radius: 10px;
+}
+
+.forum h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+.forum p {
+  font-size: 16px;
+  color: #666;
+}
+
+.forum .post {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#newPostForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  color: black;
+  border: 2px solid #0077ff;
+  border-radius: 10px;
+  padding: 15px 20px; /* Ajustado para garantir que os inputs fiquem dentro da div */
+  background: transparent;
+  width: 100%; /* Ajustado para garantir que os inputs fiquem dentro da div */
+  box-sizing: border-box; /* Garantir que o padding seja incluído na largura total */
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.input:active {
+  box-shadow: 2px 2px 15px #0077ff inset;
+}
+
+.form-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.form-row textarea {
+  flex-grow: 1;
+  color: black;
+  border: 2px solid #0077ff;
+  border-radius: 10px;
+  padding: 15px 20px; /* Ajustado para garantir que o textarea fique dentro da div */
+  background: transparent;
+  font-size: 16px;
+  box-sizing: border-box; /* Garantir que o padding seja incluído na largura total */
+}
+
+.form-row textarea:active {
+  box-shadow: 2px 2px 15px #0077ff inset;
+}
+
+button {
+  --color: #0077ff;
+  font-family: inherit;
+  display: inline-block;
+  width: 6em;
+  height: 2.6em;
+  line-height: 2.5em;
+  overflow: hidden;
+  cursor: pointer;
+  margin: 20px;
+  font-size: 17px;
+  z-index: 1;
+  color: var(--color);
+  border: 2px solid var(--color);
+  border-radius: 6px;
+  position: relative;
+}
+
+button::before {
+  position: absolute;
+  content: "";
+  background: var(--color);
+  width: 150px;
+  height: 200px;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+button:hover {
+  color: white;
+}
+
+button:before {
+  top: 100%;
+  left: 100%;
+  transition: 0.3s all;
+}
+
+button:hover::before {
+  top: -30px;
+  left: -30px;
+}
+.circulo {
+  width: 50px; /* largura da div */
+  height: 50px; /* altura da div */
+  overflow: hidden; /* esconde partes da imagem que ultrapassem a div */
+  border-radius: 50%; /* torna a div e a imagem redondas */
+  border: 0px solid #000000; /* borda opcional */
+  float: left;
+}
+.circulo img {
+  width: 100%; /* garante que a imagem ocupe todo o espaço da div */
+  height: auto; /* mantém a proporção da imagem */
+  display: block; /* remove espaços em branco abaixo da imagem */
+}
+input[type="submit"] {
+  background-color: #0692c9be;
+  color: white;
+  padding: 10px 15px;
+  margin: 8px 0;
+  border: 1;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 9%;
+}
+input[type="submit"]:hover {
+  background-color: #64b9db;
+  color: black;
+  transition: 0.7s;
+}

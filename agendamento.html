@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agendamento de Manutenção</title>
+<link rel="stylesheet" href="agendamento.css">
+<link rel="stylesheet" href="responsivo.css">
+</head>
+<body>
+  <div class="circulo">
+    <a href="login.html"><img src="gota1.png" alt="Água para todos"></a>
+</div><br>
+<div class="container">
+  <h2>Agendamento de Manutenção</h2>
+  
+  <form id="maintenanceForm">
+    <label for="location">Local:</label>
+    <input type="text" id="location" class="input" required>
+
+    <label for="maintenanceType">Tipo de Manutenção:</label>
+    <select id="maintenanceType" class="input" required>
+      <option value="">Selecione o tipo de manutenção</option>
+      <option value="Poço">Manutenção de Poço</option>
+      <option value="Estação de Tratamento">Manutenção de Estação de Tratamento</option>
+      <option value="Tubulação">Manutenção de Tubulação</option>
+      <option value="Bomba d'água">Manutenção de Bomba d'água</option>
+      <option value="Filtro">Manutenção de Filtro de Água</option>
+    </select>
+
+    <label for="date">Escolha uma data disponível:</label>
+    <select id="date" class="input" required>
+      <option value="">Selecione uma data</option>
+      <!-- Opções de datas serão adicionadas dinamicamente pelo JavaScript -->
+    </select>
+
+    <label for="problemDescription">Descrição do Problema (opcional):</label>
+    <textarea id="problemDescription" class="input" rows="4"></textarea>
+
+    <button type="submit">Agendar Manutenção</button>
+  </form>
+
+  <div id="notifications">
+    <!-- Notificações serão exibidas aqui -->
+  </div>
+</div>
+<script src="agendamento.js"></script>
+<br><br>
+<br><br>
+<a href="tela-inicial.html"><input type="submit" value="⭠ Voltar"></a>
+</body>
+</html>
