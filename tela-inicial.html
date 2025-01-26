@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="custom.css">
+<link rel="stylesheet" href="responsivo.css">
+<title>Bem-vindo!</title>
+<style>
+    * { 
+ color: var(--fontColor);
+}
+body {
+
+ background: var(--bg);
+    
+}
+  header{
+    font-size: medium;
+    background-color: #47b8ff80;
+    padding: 5px;
+}
+.light-theme {
+    --bg: var(--white);
+    --fontColor: var(--black);
+    --btnBg: var(--black);
+    --btnFontColor: var(--white);
+    
+}
+.dark-theme {
+    --bg: var(--black);
+    --fontColor: var(--white);
+    --btnBg: var(--white);
+    --btnFontColor: var(--black);
+}
+:root {
+    --green: #00FF00;
+    --white: #E0FFFF;
+    --black: #2e2d2d;
+}
+.theme-switcher {
+        padding: 2px;
+        width: -moz-fit-content;
+        width: fit-content;
+        display: flex;
+        background-color: #0097f544;
+        border-radius: 9999px;
+        border: 1px solid rgb(0, 0, 0);
+        float: right;
+ }
+      
+.btn{
+        width: 30px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: inherit;
+        border: 0;
+        background: none;
+        cursor: pointer;
+}
+      
+.theme-switcher_switch:hover > .icon {
+        stroke: #323232;
+}
+      
+.theme-switcher_switch:active {
+        background-color: rgba(128, 128, 128, 0.35);
+}
+      
+.theme-switcher_switch:active > .icon {
+        stroke: white;
+}
+.btn:focus{ outline-style: none; }
+.circulo {
+        width: 50px; /* largura da div */
+        height: 50px; /* altura da div */
+        overflow: hidden; /* esconde partes da imagem que ultrapassem a div */
+        border-radius: 50%; /* torna a div e a imagem redondas */
+        border: 0px solid #ffffff; /* borda opcional */
+        float: left;
+    }
+    .circulo img {
+        width: 100%; /* garante que a imagem ocupe todo o espaço da div */
+        height: auto; /* mantém a proporção da imagem */
+        display: block; /* remove espaços em branco abaixo da imagem */
+    }
+</style>
+</head>
+<body class="light-theme">
+  <hr width="100%" size="5" color="#1854b5">
+<div><div role="radiogroup" class="theme-switcher">
+    <button
+      type="button"
+      role="radio"
+      data-theme-switcher="true"
+      data-active="true"
+      class="btn"
+      aria-label="Switch to dark theme"
+      aria-checked="true"
+    >
+      <svg
+        style="color: currentcolor; width: 16px; height: 16px; float: rigth;"
+        width="24"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke-linejoin="round"
+        stroke-linecap="round"
+        stroke="currentColor"
+        shape-rendering="geometricPrecision"
+        height="24"
+        fill="none"
+        data-testid="geist-icon"
+        class="icon"
+      >
+        <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+      </svg>
+    </button>
+  </div>    
+</div>  
+<header>
+  <div class="circulo">
+    <a href="index.html"><img src="gota1.png" alt="Água para todos"></a>
+</div><br>
+<center><font color="" size="6" face="lucida sans"><b>Água limpa para todos</b></font></center><br>
+</header>
+<hr width="100%" size="5" color="#1854b5"></div>
+<font color="" size="5" face="lucida sans" id="welcomeMessage"></font>
+<font color="" size="4" face="Century Gothic"><br>Sabia um pouco sobre o projeto:
+ <p><b>∙</b> "Água Limpa para Todos" é uma iniciativa valiosa para abordar a escassez de água potável e a falta de saneamento básico em comunidades vulneráveis.
+  
+  <p><b>∙</b> Permitir que os moradores se cadastrem no site é essencial para criar uma base de dados de usuários. Coletar informações básicas como nome, endereço e contato ajudará a rastrear quem está usando o sistema e a fornecer suporte personalizado. 
+ </p><hr width="100%" size="2" color="#1854b5">
+<center>
+  <p><b>Navegue pelo nosso site para saber mais!</b></p></p></font>
+<br><a href="ODS 6.html"><button class="btn-donate">
+ODS 6 →
+</button></a>
+<a href="forum.html"><button class="btn-donate">
+  Fórum →
+</button></a>
+<a href="blog.html"><button class="btn-donate">
+  Blog →
+</button></a>
+<a href="agendamento.html"><button class="btn-donate">
+  Agendamento →
+</button></a>
+</center>
+<br><br>
+<center>
+  <div class="gallery">
+    <div class="slideshow">
+      <div class="slides">
+        <img src="foto.jpg"  alt="Imagem 1">
+        <img src="foto2.jpg" alt="Imagem 2">
+        <img src="foto3.jpg" alt="Imagem 3">
+        <!-- Adicione quantas imagens quiser -->
+      </div>
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+    </div>
+  </div>
+</center>
+<script>
+  let slideIndex = 0;
+  showSlides(slideIndex);
+
+function showSlides(n) {
+  const slides = document.getElementsByClassName("slides")[0].getElementsByTagName("img");
+  
+  if (n >= slides.length) {
+    slideIndex = 0;
+  }
+  
+  if (n < 0) {
+    slideIndex = slides.length - 1;
+  }
+  
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].classList.remove('active');
+  }
+  
+  slides[slideIndex].classList.add('active');
+}
+
+document.querySelector('.prev').addEventListener('click', () => {
+  showSlides(--slideIndex);
+});
+
+document.querySelector('.next').addEventListener('click', () => {
+  showSlides(++slideIndex);
+});
+  // Obtém o nome do usuário armazenado no localStorage
+  var username = localStorage.getItem("username");
+
+  // Exibe uma mensagem de boas-vindas com o nome do usuário
+  document.getElementById("welcomeMessage").textContent = "Olá " + username + ", Seja Bem-Vindo!";
+  
+'use strict'
+
+const switcher = document.querySelector('.btn');
+
+switcher.addEventListener('click', function() {
+    document.body.classList.toggle('dark-theme')
+
+    var className = document.body.className;
+    if(className == "light-theme"){
+
+    }
+    else{
+
+    }
+    console.log('current class name:' + className);
+    let slideIndex = 0;
+});
+</script>
+<br><br>
+<br><br>
+<hr width="100%" size="2" color="#1854b5">
+<header>
+<footer>
+  <center><p>&copy;<b> 2024. Água limpa para todos</b></p></center>
+</footer>
+<br>
+</header>
+</body>
+</html>
